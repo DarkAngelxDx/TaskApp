@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: cli-todo
+Version: 1.0.0
+Summary: Advanced CLI Todo Manager
+Author: Maksym
+Requires-Dist: rich
