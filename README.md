@@ -1,126 +1,110 @@
-TaskApp — Advanced CLI Todo Manager
+## TaskApp — Advanced CLI Todo Manager ##
+TaskApp is a powerful command‑line todo manager built in Python, designed with clean architecture and real‑world features.
 
-TaskApp is a powerful command-line todo application written in Python.
-It is designed as a portfolio-level project with clean architecture and real-world features.
+## ✨ Features
+- Add, list, complete, and delete tasks
 
-Features
+- Task priorities: low, medium, high
 
-Add, list, complete, and delete tasks
+- Deadlines with overdue highlighting
 
-Task priorities: low / medium / high
+- Multi‑user profiles (separate SQLite DB per user)
 
-Deadlines with overdue highlighting
+- Persistent storage
 
-Multi-user profiles (separate databases per user)
+- Today view for urgent & overdue tasks
 
-SQLite persistent storage
+- Task statistics
 
-Today view for urgent and overdue tasks
+- Export tasks to CSV
 
-Task statistics
+- Rich terminal UI
 
-Export tasks to CSV
+- Command auto‑completion
 
-Rich terminal UI
+- Installable via pip
 
-Command auto-completion
+- Windows executable support
 
-Installable via pip
-
-Windows executable support
-
-Installation
+## 📦 Installation
 Local installation (development)
+
 git clone https://github.com/DarkAngelxDx/TaskApp.git
+
 cd TaskApp
+
 pip install -e .
 
 Run without installation
+
 python -m todo.cli
-
-Usage
-
-Add a task:
+## 🧭 Usage
+Add a task
 
 todo add "Finish portfolio" --priority high --deadline 2026-01-15
 
-
-List all tasks:
+List all tasks
 
 todo list
 
-
-Mark task as done:
+Mark a task as done
 
 todo done 1
 
-
-Delete a task:
+Delete a task
 
 todo delete 1
+## 📅 Today View
+Show tasks due today or overdue:
 
-Today View
-
-Show all pending tasks due today or overdue:
 
 todo today
-
-Statistics
-
-Display task statistics:
+## 📊 Statistics
 
 todo stats
-
-Multi-user Profiles
-
-List users:
+## 👥 Multi‑user Profiles
+List users
 
 todo user list
-
-
-Create a new user:
+Create a new user
 
 todo user create work
-
-
-Switch active user:
+Switch active user
 
 todo user switch work
-
-Export Tasks
-
-Export all tasks to CSV:
+## 📤 Export Tasks
 
 todo export
-
-
 Output file:
 
+
 tasks.csv
+## ⚙️ Configuration
+Config file location
 
-Configuration
+Windows:  
+C:\Users\<username>\.todo\config.toml
 
-Configuration file location:
+Linux/macOS:  
+~/.todo/config.toml
 
-Windows: C:\Users\<username>\.todo\config.toml
+Example config
 
-Linux/macOS: ~/.todo/config.toml
-
-Example configuration:
+toml
 
 user = "default"
+
 date_format = "%Y-%m-%d"
 
-Command Auto-completion
-
-Linux / macOS:
+## ⌨️ Command Auto‑completion
+Linux / macOS
 
 activate-global-python-argcomplete
 
-
-Windows:
+Windows
 
 pip install pyreadline3
 
-Running Tests
-pytest
+## 🧪 Running Tests
+ pytest
+
